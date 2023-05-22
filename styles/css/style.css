@@ -1,0 +1,74 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dificultad {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 5%;
+    text-align: center;
+}
+
+.dificultad button {
+    height: 75%;
+}
+
+.puntuacion {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.tablero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 95%;
+    width: 80%;
+    background-color: rgba(0, 255, 0, 0.5);
+    margin: 0 auto;
+    cursor: url("../../assets/img/mazo-1.png") 20 60, auto;
+    padding: 1%;
+    transform: perspective(900px) rotateX(40deg) translateY(-50px);
+
+}
+
+.puntero2 {
+    cursor: url("../../assets/img/mazo-2.png") 20 60, auto;
+}
+
+.fila-1 {
+    margin-top: 1%;
+}
+
+[class^="fila-"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+[class^="hueco-"] {
+    height: 128px;
+    width: 180px;
+    position: relative;
+}
+
+[class^="hueco-"] img {
+    height: 100%;
+    position: absolute;
+}
+
+[class^="hueco-"] img[src="assets/img/topo-fuera.png"] {
+    opacity: 0;
+}
+
+.ver {
+    transition: opacity 0.5s linear;
+}
